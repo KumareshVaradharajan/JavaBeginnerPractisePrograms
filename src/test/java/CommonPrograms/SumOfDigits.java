@@ -12,18 +12,51 @@ public class SumOfDigits {
 
     }
 
-    public void calculateSumOfTheDigits(int value) {
+    public void calculateSumOfTheDigits(int input) {
 
-        int sum = 0, lastDigit = 0;
+        int sum = 0, remainder;
 
-        while (value > 0) {
-            lastDigit = value % 10;
-            sum = sum + lastDigit;
-            value = value / 10;
+        while (input > 0) {
+            remainder = input % 10;
+            sum = sum + remainder;
+            input = input / 10;
         }
 
         System.out.println(sum);
 
+
+    }
+
+
+    @Test
+    public void getSumOfdigits() {
+
+        int input = 567;
+        int remainder, sum = 0;
+
+        while (input > 0) {
+            remainder = input % 10;
+            sum = sum + remainder;
+            input = input / 10;
+        }
+
+        System.out.println(sum);
+
+    }
+
+    @Test
+    public void getReversalOfNumber() {
+
+        int input = 567;
+        int remainder = 0, reversedNumber = 0;
+
+        while (input != 0) {
+            remainder = input % 10;
+            reversedNumber = reversedNumber * 10 + remainder;
+            input = input / 10;
+        }
+
+        System.out.println(reversedNumber);
 
     }
 }
